@@ -1,0 +1,116 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/pokeball_bg3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.nav_position {
+	padding: 0 25px 0 15px;
+}
+
+.nav_position a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.nav_position ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.user_deco a {
+	text-decoration: none;
+	color: #000;	
+}
+
+.container_card {
+	margin: 0 35px 0 35px;
+}
+
+.card {
+	border-radius: 6px;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+	transition: all 400ms ease;
+}
+
+.card:hover {
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+	transform: translateY(-3%);
+}
+
+.card .image1 {
+	width: 100%;
+	height: 230px;
+}
+
+.card .contenido {
+	padding: 20px;
+	text-align: center;
+}
+
+.card .contenido a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+}
+
+.card .contenido a:hover {
+	background: #2fb4cc;
+	color: #fff;
+}
+
+.con_mar {
+	margin: 40px 0 60px 0;
+}
+
+.but_init a {
+	font-size: 20px;
+	border: 1px solid #fff;
+	text-decoration: none;
+	padding: 15px;
+	color: #fff;
+	border-radius: 15px;
+	background: #0000FF;
+}
+
+.but_init a:hover {
+	border: 1px solid #0000FF;
+	background: #e3f2fd;
+	color: #0000FF;
+}
+/*
+.gallery {
+	display: grid;
+	gap: 1rem;
+	grid-auto-rows: 22rems;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+*/
+.container_bg {
+	background: rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+
+.title_c {
+	margin: 0 30px 0 30px;
+	font-size: 50px;
+	font-weight: bold;
+	color: #0000FF;
+	background: rgba(255,255,255,0.8);
+	border-radius: 20px;
+}
+
+.carta {
+	width: 100%;
+	height: 60px;
+	display: inline-flex;
+	justify-content: space-between;
+}

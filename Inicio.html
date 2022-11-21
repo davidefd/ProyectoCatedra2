@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/stylemain.css">
+	<link rel="stylesheet" href="css/css_boot/bootstrap.min.css">
+	<script src="js/login.js"></script>
+
+	<title>Bienvenido</title>
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark nav_position">
+		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="navbar-toggler-icon"></span></a>
+
+		<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <li><a class="dropdown-item" href="Deposito.html">Depósito</a></li>
+           <li><a class="dropdown-item" href="Retiro.html">Retiro</a></li>
+           <li><a class="dropdown-item" href="Consulta.html">Consulta de Saldo</a></li>
+           <li><a class="dropdown-item" href="Servicios.html">Pago de Servicios</a></li>
+           <li><a class="dropdown-item" href="Historial.html">Historial</a></li>
+           <li><a class="dropdown-item" href="Grafica.html">Gráfica</a></li>
+        </ul>
+
+		<div class="dropdown">
+			<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cerrar Sesión</a>
+			<div class="dropdown-menu text-center user_deco">
+				<a href="#"><img src="img/pokeball.png" height="60" width="60"></a>
+				<br>
+
+				<div id="nombre">
+				</div>
+				
+				<div id="noCuenta">
+				</div>
+
+				<div class="dropdown-divider"></div>
+				<a onclick="salir()" class="dropdown-item">Salir</a>
+			</div>
+		</div>
+	</nav>
+
+	<h1 class="text-center mt-5 py-3 title_c">Bienvenido a PokemónBank</h1>
+
+	<div class="container_card py-5">
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+				<div class="card">
+					<figure>
+						<img class="image1" src="img/poke_back7.jpg">
+					</figure>
+					<div class="contenido d-grid">
+						<a href="Deposito.html">DEPÓSITO</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+				<div class="card">
+					<figure>
+						<img class="image1" src="img/poke_back3.jpg">
+					</figure>
+					<div class="contenido d-grid">
+						<a href="Retiro.html">RETIRO</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+				<div class="card">
+					<figure>
+						<img class="image1" src="img/poke_back6.jpg">
+					</figure>
+					<div class="contenido d-grid">
+						<a href="Consulta.html">CONSULTA SALDO</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+				<div class="card">
+					<figure>
+						<img class="image1" src="img/poke_back5.jpg">
+					</figure>
+					<div class="contenido d-grid">
+						<a href="Servicios.html">PAGO DE SERVICIOS</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+				<div class="card">
+					<figure>
+						<img class="image1" src="img/poke_back8.jpg">
+					</figure>
+					<div class="contenido d-grid">
+						<a href="Historial.html">HISTORIAL</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+				<div class="card">
+					<figure>
+						<img class="image1" src="img/poke_back9.jpg">
+					</figure>
+					<div class="contenido d-grid">
+						<a href="Grafica.html" id="miGrafica">GRÁFICA</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="bg-light text-dark py-3 mt-4">
+		<div class="container">
+			<nav class="row justify-content-center">
+				<ul class="col-12 col-md-12 list-unstyled text-center mb-0">
+					<small>&copy;<b>Universidad Don Bosco</b> - Todos los Derechos Reservados</small>
+				</ul>
+			</nav>
+		</div>
+    </footer>  
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>	
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script>
+		
+		const nombre = document.getElementById('nombre');
+ 		const noCueta = document.getElementById('noCuenta');
+
+		const usuario = JSON.parse(localStorage.getItem("Usuario"));
+
+		nombre.innerHTML = `<a href="#">${usuario.nombre}</a>`;
+		noCueta.innerHTML = `<a href="#">No.${usuario.noCuenta}</a>`;
+
+
+		function salir(){
+
+			swal({
+			title: "Estas a punto de cerrar sesión",
+			text: "¿Estás seguro de querer finalizar la sesión?",
+			icon: "warning",
+			buttons: true,
+			dangerMode: true,
+			})
+			.then((salir) => {
+			if (salir) {
+				window.location = "Login.html";
+			} else {
+			}
+			});
+		}
+
+	</script>
+</body>
+</html>

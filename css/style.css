@@ -1,0 +1,15 @@
+body {
+	height: 100vh;
+	background-image: url(../img/pokeball_bg.jpg);
+	background-position: center center;
+}
+
+.con_mar {
+	margin-top: 8%;
+}
+
+.img_bg {
+	background-image: url(../img/pikachu.jpg);
+	background-position: center center;
+	background-size: cover;
+}
